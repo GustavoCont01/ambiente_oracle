@@ -1,0 +1,11 @@
+services:
+  oracle:
+    image: container-registry.oracle.com/database/free:latest
+    container_name: oracle-lab
+    restart: always
+    volumes:
+      - .:/opt/oracle/oradata
+    ports:
+      - 1522:1521
+    environment:
+      - ORACLE_PWD="12345gyg"
